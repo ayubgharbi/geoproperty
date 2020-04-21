@@ -80,6 +80,8 @@ GEM
       multipart-post (>= 1.2, < 3)
     feather (0.4.2)
       addressable
+    feathericon-rails (1.0.0)
+      rails (>= 4.0.0)
     ffi (1.12.2)
     figaro (1.1.1)
       thor (~> 0.14)
@@ -421,6 +423,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   feather (~> 0.4.2)
+  feathericon-rails
   figaro
   fog (~> 2.2)
   jbuilder (~> 2.5)

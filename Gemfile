@@ -18,6 +18,8 @@ gem 'feather', '~> 0.4.2'
 gem 'carrierwave', '~> 2.1'
 gem 'mini_magick'
 gem 'fog', '~> 2.2' 
+gem 'feathericon-rails'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
