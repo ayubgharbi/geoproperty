@@ -2,7 +2,7 @@ class PhotoUploader < CarrierWave::Uploader::Base
 
     include CarrierWave::MiniMagick
     
-    storage :fog
+    storage :file
     
     def store_dir
         'public/my/upload/directory'
