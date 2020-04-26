@@ -4,7 +4,7 @@ class Account < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  mount_uploader :image, PhotoUploader
+  mount_uploader :image, ProfilePictureUploader
   has_many :properties
 
   def full_name
