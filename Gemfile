@@ -19,6 +19,9 @@ gem 'carrierwave', '~> 2.1'
 gem 'mini_magick'
 gem 'fog', '~> 2.2' 
 gem 'feathericon-rails'
+gem 'webpacker'
+gem 'bootstrap', '~> 4.4.1'
+gem 'jquery-rails'
 
 
 group :development, :test do
