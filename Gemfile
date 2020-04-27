@@ -21,6 +21,7 @@ gem 'feathericon-rails'
 gem 'webpacker'
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
+gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
 
 
 group :development, :test do
