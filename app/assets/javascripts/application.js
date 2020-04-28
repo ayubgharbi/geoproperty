@@ -15,6 +15,12 @@
 //= require jquery
 //= require popper
 //= require ./packs/includes/properties
+//= require toastr
 //= require_tree .
 
 
+
+toastr.options = {
+    progressBar: true
+}
+gloabal.toastr = toastr;
