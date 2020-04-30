@@ -23,6 +23,7 @@ gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
 gem 'toastr-rails', '~> 1.0', '>= 1.0.3'
+gem 'geocoder'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -7,8 +7,9 @@
   <div class="row">
     <div class="col-md-8">
       <div class="row">
-        <div class="col-lg-6">
-          <p class="mb-0"><%= @property.address %></p>
+        <div class="col-lg-4">
+          <p class="h4 mb-0"><%= @property.for_sale? ? "For Sale" : "For Rent" %></p>
+          <p class="mb-2"><%= @property.address %></p>
           <p class="h2 mb-3">
             <% if @property.for_sale? %>
               <%= @property.price > 0 ? number_to_currency(@property.price, precision: 0) : "For Sale" %>
@@ -17,22 +18,19 @@
             <% end %>
           </p>
         </div >
-        <div class="col-lg-6 text-center">
-          <div class="row mr-lg-3 mt-sm-3 bg-light p-3">
+        <div class="col-lg-8 text-center">
+          <div class="row mt-sm-3 bg-light p-3">
             <div class="col-4">
-              <p class="m-0"><strong>Rooms</strong></p>
-              <i class="fa fa-bed"></i>
-              <span class="font-18"><%= @property.rooms %></span>
+              <i class="fa fa-bed text-muted m-0"></i><br />
+              <small><%= @property.rooms %> Rooms</small>
             </div>
             <div class="col-4">
-              <p class="m-0"><strong>Bathrooms</strong></p>
-              <i class="fa fa-bath"></i>
-              <span class="font-18"><%= @property.bathrooms %></span>
+              <i class="fa fa-bath text-muted m-0"></i><br />
+              <small><%= @property.bathrooms %> Bathrooms</small>
             </div>
             <div class="col-4">
-              <p class="m-0"><strong>Parking</strong></p>
-              <i class="fa fa-car"></i>
-              <span class="font-18"><%= @property.parking_spaces %></span>
+              <i class="fa fa-car text-muted m-0"></i><br />
+              <small><%= @property.parking_spaces %> Parking</small>
             </div>
           </div>
         </div>
@@ -66,6 +64,21 @@
     </div>
     <div class="col-md-4">
       <%= render "properties/agent_details" %>
+      <div class="container text-center mt-3 pl-5">
+      <div id="map"></div>
+          <script>
+            var map;
+            function initMap() {
+              map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: <%= @property.latitude %>, lng: <%= @property.longitude %>},
+                zoom: 17
+              });
+            }
+          </script>
+          <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcTsP4utMLhmko_H7rmT_FM06KVc2xm04&callback=initMap">
+          </script>
+      </div>
     </div>
   </div>
 </div>

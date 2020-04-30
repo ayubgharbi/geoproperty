@@ -3,4 +3,9 @@
 @import "properties";
 @import "public";
 @import "font-awesome";
-@import "toastr"
+@import "toastr";
+
+
+#map {
+    height: 250px;
+}
