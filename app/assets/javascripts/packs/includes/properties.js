@@ -3,6 +3,7 @@ $(function(){
     var $this = $(this);
     $this.find("span").text( $this.data("telephone") );
     });
+    
     $("#toggleDetails").on("click", function(){
         var details = $("#prop-details");
         details.toggleClass("open");
@@ -11,5 +12,10 @@ $(function(){
         } else {
             $(this).text("Show more");
         }
+    });
+
+    $('#contact-modal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var modal = $(this);
     });
 });
