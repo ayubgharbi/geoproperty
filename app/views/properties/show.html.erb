@@ -65,7 +65,7 @@
       </div>
     </div>
     <div class="col-md-4">
-      <%= render "properties/agent_details" %>
+      <%= render "properties/agent_details", agent: @agent %>
       <div class="container text-center mt-3 pl-5">
       <div id="map"></div>
           <script>
@@ -96,7 +96,7 @@
   </div>
 </section>
 
-<%= render "properties/send_email_modal" %>
+<%= render "properties/send_email_modal", agent: @agent %>
         
          
       

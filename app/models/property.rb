@@ -4,6 +4,11 @@ class Property < ApplicationRecord
 
     scope :latest, -> { order created_at: :desc }
 
+    scope :sold, -> { where(for_sale: true, status: "sold") }
+    scope :for_sale, -> { where(for_sale: true, status: "available") }
+    scope :leased, -> { where(for_sale: false, status: "leased") }
+    scope :for_rent, -> { where(for_sale: false, status: "available") }
+
     geocoded_by :address
     after_validation :geocode
     after_validation :geocode, if: ->(obj){ obj.address.present? and obj.address_changed? }
