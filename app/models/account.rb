@@ -5,6 +5,7 @@ class Account < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   mount_uploader :image, ProfilePictureUploader
+  mount_uploader :cover_image, ProfilePictureUploader
   has_many :properties
 
   def full_name
