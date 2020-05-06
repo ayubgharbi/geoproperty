@@ -10,27 +10,8 @@
         <div class="col-lg-4">
           <p class="h4 mb-0"><%= @account.full_name %></p>
           <p class="mb-2"><%= @account.company %></p>
+          <p class="text-muted">Registred for <%= time_ago_in_words @account.created_at %></p>
         </div >
-        <div class="col-lg-8 text-center">
-          <div class="row mt-sm-3 bg-light p-3">
-            <div class="col-3">
-              <i class="fa fa-bed text-muted m-0"></i><br />
-              <small><%= @properties_sold %> Sold</small>
-            </div>
-            <div class="col-3">
-              <i class="fa fa-bed text-muted m-0"></i><br />
-              <small><%= @properties_for_sale %> For Sale</small>
-            </div>
-            <div class="col-3">
-              <i class="fa fa-bath text-muted m-0"></i><br />
-              <small><%= @properties_leased %> Leased</small>
-            </div>
-            <div class="col-3">
-              <i class="fa fa-car text-muted m-0"></i><br />
-              <small><%= @properties_for_rent %> For Rent</small>
-            </div>
-          </div>
-        </div>
       </div>
       <div class="row border-top mt-5 pt-4">
         <div class="col">
@@ -46,9 +27,23 @@
       </div>
     </div>
     <div class="col-md-4">
-      <%= render "properties/agent_details", agent: @account %>
-      <div class="container text-center mt-3 pl-5">
-
+      <%= render "properties/profile_agent_contact_details", agent: @account %>
+      
+      <div class="offset-md-1 col-md-10 text-center">
+        <div class="row mt-sm-3 bg-light p-3">
+          <div class="col-md-6">
+            <p class="lead"><%= @properties_sold %><br />  Sold</p>
+          </div>
+          <div class="col-md-6">
+            <p class="lead"><%= @properties_for_sale %><br />  For Sale</p>
+          </div>
+          <div class="col-md-6">
+            <p class="lead"><%= @properties_leased %><br /> Leased</p>
+          </div>
+          <div class="col-md-6">
+            <p class="lead"><%= @properties_for_rent %><br />  For Rent</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
